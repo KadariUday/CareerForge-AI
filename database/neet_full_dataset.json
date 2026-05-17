@@ -1,0 +1,1757 @@
+[
+  {
+    "college_id": "neet-0",
+    "name": "AIIMS New Delhi",
+    "location": "Delhi",
+    "state": "Delhi",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Central",
+    "fees_lpa": 0.2,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 1,
+        "closing_rank": 242
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 424,
+        "closing_rank": 783
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 973,
+        "closing_rank": 1586
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 1498,
+        "closing_rank": 2290
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 1922,
+        "closing_rank": 2712
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 1,
+        "closing_rank": 766
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 473,
+        "closing_rank": 825
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 980,
+        "closing_rank": 1610
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 1477,
+        "closing_rank": 1810
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 1924,
+        "closing_rank": 2332
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 2,
+        "closing_rank": 627
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 510,
+        "closing_rank": 1271
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 973,
+        "closing_rank": 1671
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 1465,
+        "closing_rank": 2064
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 1972,
+        "closing_rank": 2344
+      }
+    ]
+  },
+  {
+    "college_id": "neet-1",
+    "name": "AIIMS Bhopal",
+    "location": "Madhya Pradesh",
+    "state": "Madhya Pradesh",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Central",
+    "fees_lpa": 0.16,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 2816,
+        "closing_rank": 3503
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 3329,
+        "closing_rank": 3689
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 3835,
+        "closing_rank": 4517
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 4343,
+        "closing_rank": 4929
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 4826,
+        "closing_rank": 5420
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 2834,
+        "closing_rank": 3289
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 3376,
+        "closing_rank": 3918
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 3802,
+        "closing_rank": 4674
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 4358,
+        "closing_rank": 4644
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 4798,
+        "closing_rank": 5548
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 2822,
+        "closing_rank": 3267
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 3313,
+        "closing_rank": 3640
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 3816,
+        "closing_rank": 4533
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 4324,
+        "closing_rank": 5146
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 4867,
+        "closing_rank": 5411
+      }
+    ]
+  },
+  {
+    "college_id": "neet-2",
+    "name": "AIIMS Jodhpur",
+    "location": "Rajasthan",
+    "state": "Rajasthan",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Central",
+    "fees_lpa": 0.08,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 1029,
+        "closing_rank": 1707
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 1557,
+        "closing_rank": 2101
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 2051,
+        "closing_rank": 2345
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 2525,
+        "closing_rank": 3189
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 3106,
+        "closing_rank": 3427
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 1071,
+        "closing_rank": 1425
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 1538,
+        "closing_rank": 2374
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 2105,
+        "closing_rank": 2794
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 2533,
+        "closing_rank": 3055
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 3105,
+        "closing_rank": 3533
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 1110,
+        "closing_rank": 1747
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 1569,
+        "closing_rank": 1883
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 2025,
+        "closing_rank": 2917
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 2553,
+        "closing_rank": 3015
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 3104,
+        "closing_rank": 3815
+      }
+    ]
+  },
+  {
+    "college_id": "neet-3",
+    "name": "AIIMS Rishikesh",
+    "location": "Uttarakhand",
+    "state": "Uttarakhand",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Central",
+    "fees_lpa": 0.09,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 881,
+        "closing_rank": 1549
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 1430,
+        "closing_rank": 1810
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 1893,
+        "closing_rank": 2634
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 2363,
+        "closing_rank": 2705
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 2863,
+        "closing_rank": 3317
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 931,
+        "closing_rank": 1148
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 1424,
+        "closing_rank": 1662
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 1862,
+        "closing_rank": 2427
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 2433,
+        "closing_rank": 2674
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 2900,
+        "closing_rank": 3694
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 924,
+        "closing_rank": 1650
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 1385,
+        "closing_rank": 1740
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 1854,
+        "closing_rank": 2334
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 2380,
+        "closing_rank": 3012
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 2924,
+        "closing_rank": 3228
+      }
+    ]
+  },
+  {
+    "college_id": "neet-4",
+    "name": "JIPMER Puducherry",
+    "location": "Puducherry",
+    "state": "Puducherry",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Government",
+    "fees_lpa": 0.09,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 1748,
+        "closing_rank": 2084
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 2263,
+        "closing_rank": 2726
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 2810,
+        "closing_rank": 3451
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 3296,
+        "closing_rank": 3575
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 3764,
+        "closing_rank": 4295
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 1769,
+        "closing_rank": 2105
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 2333,
+        "closing_rank": 2799
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 2790,
+        "closing_rank": 3103
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 3271,
+        "closing_rank": 3728
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 3768,
+        "closing_rank": 4319
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 1777,
+        "closing_rank": 2463
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 2258,
+        "closing_rank": 2566
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 2828,
+        "closing_rank": 3388
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 3267,
+        "closing_rank": 4008
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 3821,
+        "closing_rank": 4056
+      }
+    ]
+  },
+  {
+    "college_id": "neet-5",
+    "name": "MAMC Delhi",
+    "location": "Delhi",
+    "state": "Delhi",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Government",
+    "fees_lpa": 0.1,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 1967,
+        "closing_rank": 2472
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 2506,
+        "closing_rank": 2966
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 3007,
+        "closing_rank": 3447
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 3459,
+        "closing_rank": 4144
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 3999,
+        "closing_rank": 4688
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 1999,
+        "closing_rank": 2647
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 2503,
+        "closing_rank": 3244
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 2933,
+        "closing_rank": 3447
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 3497,
+        "closing_rank": 3822
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 3971,
+        "closing_rank": 4705
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 1926,
+        "closing_rank": 2455
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 2460,
+        "closing_rank": 2718
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 2976,
+        "closing_rank": 3410
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 3491,
+        "closing_rank": 4043
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 3984,
+        "closing_rank": 4656
+      }
+    ]
+  },
+  {
+    "college_id": "neet-6",
+    "name": "LHMC Delhi",
+    "location": "Delhi",
+    "state": "Delhi",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Government",
+    "fees_lpa": 0.16,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 104,
+        "closing_rank": 699
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 633,
+        "closing_rank": 1124
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 1142,
+        "closing_rank": 1675
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 1604,
+        "closing_rank": 1986
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 2080,
+        "closing_rank": 2666
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 113,
+        "closing_rank": 378
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 581,
+        "closing_rank": 947
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 1110,
+        "closing_rank": 1872
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 1590,
+        "closing_rank": 2272
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 2122,
+        "closing_rank": 2556
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 68,
+        "closing_rank": 433
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 629,
+        "closing_rank": 1130
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 1150,
+        "closing_rank": 1414
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 1628,
+        "closing_rank": 2206
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 2111,
+        "closing_rank": 2423
+      }
+    ]
+  },
+  {
+    "college_id": "neet-7",
+    "name": "Madras Medical College",
+    "location": "Tamil Nadu",
+    "state": "Tamil Nadu",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Government",
+    "fees_lpa": 0.13,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 1712,
+        "closing_rank": 2140
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 2180,
+        "closing_rank": 3048
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 2760,
+        "closing_rank": 3170
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 3173,
+        "closing_rank": 3755
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 3729,
+        "closing_rank": 4190
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 1722,
+        "closing_rank": 2407
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 2195,
+        "closing_rank": 2842
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 2728,
+        "closing_rank": 2999
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 3231,
+        "closing_rank": 3967
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 3719,
+        "closing_rank": 4119
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 1685,
+        "closing_rank": 2338
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 2191,
+        "closing_rank": 2803
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 2759,
+        "closing_rank": 3329
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 3261,
+        "closing_rank": 3903
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 3716,
+        "closing_rank": 3970
+      }
+    ]
+  },
+  {
+    "college_id": "neet-8",
+    "name": "Stanley Medical College",
+    "location": "Tamil Nadu",
+    "state": "Tamil Nadu",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Government",
+    "fees_lpa": 0.09,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 898,
+        "closing_rank": 1694
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 1375,
+        "closing_rank": 1823
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 1901,
+        "closing_rank": 2167
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 2430,
+        "closing_rank": 3020
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 2895,
+        "closing_rank": 3209
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 916,
+        "closing_rank": 1649
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 1355,
+        "closing_rank": 1664
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 1842,
+        "closing_rank": 2552
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 2353,
+        "closing_rank": 2724
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 2887,
+        "closing_rank": 3339
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 885,
+        "closing_rank": 1511
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 1419,
+        "closing_rank": 1975
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 1903,
+        "closing_rank": 2715
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 2337,
+        "closing_rank": 3144
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 2879,
+        "closing_rank": 3607
+      }
+    ]
+  },
+  {
+    "college_id": "neet-9",
+    "name": "Osmania Medical College",
+    "location": "Telangana",
+    "state": "Telangana",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Government",
+    "fees_lpa": 0.08,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 434,
+        "closing_rank": 983
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 881,
+        "closing_rank": 1415
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 1437,
+        "closing_rank": 1692
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 1881,
+        "closing_rank": 2304
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 2458,
+        "closing_rank": 3160
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 387,
+        "closing_rank": 1259
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 901,
+        "closing_rank": 1268
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 1381,
+        "closing_rank": 2162
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 1918,
+        "closing_rank": 2623
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 2456,
+        "closing_rank": 2777
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 360,
+        "closing_rank": 1003
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 941,
+        "closing_rank": 1639
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 1420,
+        "closing_rank": 2100
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 1884,
+        "closing_rank": 2493
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 2386,
+        "closing_rank": 2741
+      }
+    ]
+  },
+  {
+    "college_id": "neet-10",
+    "name": "Andhra Medical College",
+    "location": "Andhra Pradesh",
+    "state": "Andhra Pradesh",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Government",
+    "fees_lpa": 0.05,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 4342,
+        "closing_rank": 5077
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 4861,
+        "closing_rank": 5528
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 5349,
+        "closing_rank": 6100
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 5843,
+        "closing_rank": 6646
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 6424,
+        "closing_rank": 7152
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 4411,
+        "closing_rank": 4727
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 4921,
+        "closing_rank": 5308
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 5384,
+        "closing_rank": 5812
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 5863,
+        "closing_rank": 6428
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 6420,
+        "closing_rank": 6664
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 4362,
+        "closing_rank": 4849
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 4869,
+        "closing_rank": 5544
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 5385,
+        "closing_rank": 5725
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 5925,
+        "closing_rank": 6414
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 6428,
+        "closing_rank": 6864
+      }
+    ]
+  },
+  {
+    "college_id": "neet-11",
+    "name": "KGMU Lucknow",
+    "location": "Uttar Pradesh",
+    "state": "Uttar Pradesh",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Government",
+    "fees_lpa": 0.15,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 3688,
+        "closing_rank": 4336
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 4201,
+        "closing_rank": 4532
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 4686,
+        "closing_rank": 5084
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 5197,
+        "closing_rank": 5926
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 5728,
+        "closing_rank": 6017
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 3728,
+        "closing_rank": 4310
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 4148,
+        "closing_rank": 4942
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 4687,
+        "closing_rank": 5195
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 5227,
+        "closing_rank": 6028
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 5654,
+        "closing_rank": 5990
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 3681,
+        "closing_rank": 4453
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 4169,
+        "closing_rank": 4472
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 4676,
+        "closing_rank": 5466
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 5140,
+        "closing_rank": 6030
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 5698,
+        "closing_rank": 6470
+      }
+    ]
+  },
+  {
+    "college_id": "neet-12",
+    "name": "BJ Medical College Ahmedabad",
+    "location": "Gujarat",
+    "state": "Gujarat",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Government",
+    "fees_lpa": 0.11,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 4020,
+        "closing_rank": 4794
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 4562,
+        "closing_rank": 5369
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 5062,
+        "closing_rank": 5757
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 5517,
+        "closing_rank": 6145
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 6059,
+        "closing_rank": 6654
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 4084,
+        "closing_rank": 4548
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 4569,
+        "closing_rank": 4838
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 5001,
+        "closing_rank": 5795
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 5567,
+        "closing_rank": 6294
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 6034,
+        "closing_rank": 6433
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 4047,
+        "closing_rank": 4539
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 4502,
+        "closing_rank": 5182
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 5024,
+        "closing_rank": 5791
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 5511,
+        "closing_rank": 5907
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 6036,
+        "closing_rank": 6335
+      }
+    ]
+  },
+  {
+    "college_id": "neet-13",
+    "name": "Grant Medical College Mumbai",
+    "location": "Maharashtra",
+    "state": "Maharashtra",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Government",
+    "fees_lpa": 0.08,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 3440,
+        "closing_rank": 3805
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 3975,
+        "closing_rank": 4384
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 4505,
+        "closing_rank": 5106
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 4961,
+        "closing_rank": 5442
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 5450,
+        "closing_rank": 5964
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 3426,
+        "closing_rank": 4055
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 3944,
+        "closing_rank": 4587
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 4424,
+        "closing_rank": 5157
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 4938,
+        "closing_rank": 5578
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 5505,
+        "closing_rank": 6044
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 3504,
+        "closing_rank": 4263
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 3995,
+        "closing_rank": 4275
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 4406,
+        "closing_rank": 5145
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 4905,
+        "closing_rank": 5240
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 5451,
+        "closing_rank": 5885
+      }
+    ]
+  },
+  {
+    "college_id": "neet-14",
+    "name": "SMS Medical College Jaipur",
+    "location": "Rajasthan",
+    "state": "Rajasthan",
+    "exam": "NEET",
+    "branch": "MBBS",
+    "college_type": "Government",
+    "fees_lpa": 0.14,
+    "cutoffs": [
+      {
+        "year": 2024,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 4600,
+        "closing_rank": 5052
+      },
+      {
+        "year": 2024,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 5130,
+        "closing_rank": 5650
+      },
+      {
+        "year": 2024,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 5614,
+        "closing_rank": 6360
+      },
+      {
+        "year": 2024,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 6091,
+        "closing_rank": 6361
+      },
+      {
+        "year": 2024,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 6591,
+        "closing_rank": 7071
+      },
+      {
+        "year": 2023,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 4554,
+        "closing_rank": 5329
+      },
+      {
+        "year": 2023,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 5127,
+        "closing_rank": 5368
+      },
+      {
+        "year": 2023,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 5629,
+        "closing_rank": 6047
+      },
+      {
+        "year": 2023,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 6120,
+        "closing_rank": 6726
+      },
+      {
+        "year": 2023,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 6630,
+        "closing_rank": 7138
+      },
+      {
+        "year": 2022,
+        "category": "General",
+        "quota": "AIQ",
+        "opening_rank": 4559,
+        "closing_rank": 5416
+      },
+      {
+        "year": 2022,
+        "category": "OBC",
+        "quota": "AIQ",
+        "opening_rank": 5125,
+        "closing_rank": 5629
+      },
+      {
+        "year": 2022,
+        "category": "SC",
+        "quota": "AIQ",
+        "opening_rank": 5559,
+        "closing_rank": 6073
+      },
+      {
+        "year": 2022,
+        "category": "ST",
+        "quota": "AIQ",
+        "opening_rank": 6077,
+        "closing_rank": 6894
+      },
+      {
+        "year": 2022,
+        "category": "EWS",
+        "quota": "AIQ",
+        "opening_rank": 6604,
+        "closing_rank": 7254
+      }
+    ]
+  }
+]
