@@ -130,10 +130,13 @@ async def global_exception_handler(request, exc):
 
 if __name__ == "__main__":
     import uvicorn
+    # Dynamically read the port environment variable from Render
+    port = int(os.getenv("PORT", 8000))
     uvicorn.run(
         "main:app",
         host="0.0.0.0",
-        port=8000,
+        port=port,
         reload=settings.DEBUG,
         workers=1 if settings.DEBUG else 4,
     )
+
