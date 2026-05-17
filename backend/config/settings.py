@@ -3,8 +3,9 @@ Application settings loaded from environment variables.
 Pydantic BaseSettings automatically reads from .env file.
 """
 from pydantic_settings import BaseSettings
+from pydantic import field_validator
 from functools import lru_cache
-from typing import Optional
+from typing import Optional, Any
 import os
 
 
@@ -48,6 +49,25 @@ class Settings(BaseSettings):
         "http://localhost:3000",
         "https://careerforge-ai.vercel.app",
     ]
+
+    @field_validator("ALLOWED_ORIGINS", mode="before")
+    @classmethod
+    def parse_origins(cls, v: Any) -> list:
+        if isinstance(v, str):
+            v = v.strip()
+            # Handle JSON list
+            if v.startswith("[") and v.endswith("]"):
+                try:
+                    import json
+                    return json.loads(v)
+                except Exception:
+                    pass
+            # Handle comma-separated list
+            if "," in v:
+                return [x.strip() for x in v.split(",") if x.strip()]
+            # Handle single wildcard or string
+            return [v]
+        return v
 
     # Email (Optional — for Contact Form)
     SMTP_HOST: str = "smtp.gmail.com"
