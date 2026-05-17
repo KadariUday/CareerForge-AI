@@ -137,6 +137,7 @@ if __name__ == "__main__":
         host="0.0.0.0",
         port=port,
         reload=settings.DEBUG,
-        workers=1 if settings.DEBUG else 4,
+        workers=1,
     )
+
 
