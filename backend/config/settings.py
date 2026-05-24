@@ -48,8 +48,7 @@ class Settings(BaseSettings):
         "http://localhost:5173",
         "http://localhost:3000",
         "https://careerforge-ai.vercel.app",
-        "https://career-forge-ai-orpin.vercel.app",
-        "*"
+        "https://career-forge-ai-orpin.vercel.app"
     ]
 
     @field_validator("ALLOWED_ORIGINS", mode="before")
@@ -69,6 +68,13 @@ class Settings(BaseSettings):
                 return [x.strip() for x in v.split(",") if x.strip()]
             # Handle single wildcard or string
             return [v]
+        return v
+
+    @field_validator("*", mode="before")
+    @classmethod
+    def strip_quotes(cls, v: Any) -> Any:
+        if isinstance(v, str):
+            v = v.strip().strip('"').strip("'")
         return v
 
     # Email (Optional — for Contact Form)
