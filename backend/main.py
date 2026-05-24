@@ -133,10 +133,9 @@ if __name__ == "__main__":
     # Dynamically read the port environment variable from Render
     port = int(os.getenv("PORT", 8000))
     uvicorn.run(
-        "main:app",
+        app,
         host="0.0.0.0",
         port=port,
-        reload=settings.DEBUG,
         workers=1,
     )
 
