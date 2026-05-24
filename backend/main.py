@@ -9,9 +9,7 @@ import logging
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-# Add backend and project root to path so all imports resolve correctly
-sys.path.insert(0, str(Path(__file__).parent))
-sys.path.insert(0, str(Path(__file__).parent.parent))
+# Removed sys.path hack as it breaks package hierarchy for relative imports
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
