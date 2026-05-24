@@ -43,14 +43,17 @@
 @layer components {
   /* ── Glassmorphism ── */
   .glass-card {
-    @apply relative overflow-hidden rounded-2xl border border-white/10 backdrop-blur-md;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    @apply relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-xl shadow-2xl;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card:hover {
+    @apply border-indigo-500/30 shadow-[0_8px_32px_rgba(99,102,241,0.15)] -translate-y-1;
   }
 
   .glass-card::before {
     content: '';
-    @apply absolute inset-0 -z-10 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 opacity-0 transition-opacity duration-500;
+    @apply absolute inset-0 -z-10 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 opacity-0 transition-opacity duration-500;
   }
 
   .glass-card:hover::before {
@@ -59,7 +62,7 @@
 
   /* ── Typography ── */
   .gradient-text {
-    @apply bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient-x;
+    @apply bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient-x font-extrabold;
   }
 
   /* ── Buttons ── */
