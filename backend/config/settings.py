@@ -48,6 +48,8 @@ class Settings(BaseSettings):
         "http://localhost:5173",
         "http://localhost:3000",
         "https://careerforge-ai.vercel.app",
+        "https://career-forge-ai-orpin.vercel.app",
+        "*"
     ]
 
     @field_validator("ALLOWED_ORIGINS", mode="before")
