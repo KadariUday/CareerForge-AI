@@ -3,9 +3,9 @@ import smtplib
 from email.mime.text import MIMEText
 from typing import Optional
 from fastapi import APIRouter, HTTPException, BackgroundTasks
-from config.database import get_db
-from config.settings import settings
-from models.contact import ContactRequest, ContactMessageInDB
+from ..config.database import get_db
+from ..config.settings import settings
+from ..models.contact import ContactRequest, ContactMessageInDB
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/contact", tags=["Contact"])

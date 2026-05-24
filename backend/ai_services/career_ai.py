@@ -12,9 +12,9 @@ import re
 from typing import Optional
 from datetime import datetime
 
-from config.settings import settings
-from services.cache_service import cache_get, cache_set, make_cache_key
-from models.career import CareerInput, CareerOutput, CareerPath
+from ..config.settings import settings
+from ..services.cache_service import cache_get, cache_set, make_cache_key
+from ..models.career import CareerInput, CareerOutput, CareerPath
 
 logger = logging.getLogger(__name__)
 

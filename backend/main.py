@@ -1,6 +1,7 @@
 """
 CareerForge AI — FastAPI Backend Entry Point
 Wires together all routers, middleware, startup/shutdown lifecycle.
+hi this is uday.
 """
 import sys
 import os
@@ -8,7 +9,8 @@ import logging
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-# Add project root to path so ai_services can be imported
+# Add backend and project root to path so all imports resolve correctly
+sys.path.insert(0, str(Path(__file__).parent))
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from fastapi import FastAPI
@@ -16,11 +18,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import JSONResponse
 
-from config.settings import settings
-from config.database import connect_db, disconnect_db
-from services.cache_service import init_cache
-from middleware.rate_limiter import RateLimitMiddleware
-from routers import auth_router, career_router, college_router, resume_router, chat_router, contact_router
+from .config.settings import settings
+from .config.database import connect_db, disconnect_db, get_db
+from .services.cache_service import init_cache
+from .middleware.rate_limiter import RateLimitMiddleware
+from .routers import auth_router, career_router, college_router, resume_router, chat_router, contact_router
 
 # ─── Logging Setup ────────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -108,7 +110,7 @@ async def root():
 @app.get("/health", tags=["Health"])
 async def health_check():
     """Health check endpoint for load balancers and monitoring."""
-    from config.database import get_db
+
     db_status = "connected" if get_db() is not None else "disconnected"
     return JSONResponse(content={
         "status": "healthy",

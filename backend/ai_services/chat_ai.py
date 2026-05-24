@@ -5,9 +5,10 @@ Falls back to rule-based responses when AI is unavailable.
 import uuid
 import logging
 from typing import Optional, List, Dict
-from config.settings import settings
-from services.cache_service import cache_get, cache_set, make_cache_key
-from models.chat import ChatMessage, MessageRole
+from ..config.settings import settings
+from ..services.cache_service import cache_get, cache_set, make_cache_key
+from ..models.chat import ChatMessage, MessageRole
+from ..models.resume import ResumeAnalysisResult, ATSScore, ResumeSection, ResumeSuggestion
 
 logger = logging.getLogger(__name__)
 

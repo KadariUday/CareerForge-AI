@@ -4,11 +4,11 @@ from typing import Optional, List
 from fastapi import APIRouter, Depends, Query, HTTPException
 from motor.motor_asyncio import AsyncIOMotorDatabase
 
-from models.college import CollegePredictorInput, CollegePredictorOutput, CollegePrediction, CollegeEntry
-from models.user import UserResponse
-from services.auth_service import get_current_user
-from services.cache_service import cache_get, cache_set, make_cache_key
-from config.database import get_db
+from ..models.college import CollegePredictorInput, CollegePredictorOutput, CollegePrediction, CollegeEntry
+from ..models.user import UserResponse
+from ..services.auth_service import get_current_user
+from ..services.cache_service import cache_get, cache_set, make_cache_key
+from ..config.database import get_db
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/college", tags=["College Predictor"])

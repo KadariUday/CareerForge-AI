@@ -7,7 +7,7 @@ import os
 # Add parent directory to path to import settings
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from config.settings import settings
+from ..config.settings import settings
 
 async def seed_colleges():
     print(f"Connecting to MongoDB at {settings.MONGODB_URL}...")

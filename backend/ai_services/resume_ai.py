@@ -8,9 +8,9 @@ import io
 import hashlib
 from typing import Optional, List, Dict, Tuple
 
-from config.settings import settings
-from services.cache_service import cache_get, cache_set, make_cache_key
-from models.resume import ResumeAnalysisResult, ATSScore, ResumeSection, ResumeSuggestion
+from ..config.settings import settings
+from ..services.cache_service import cache_get, cache_set, make_cache_key
+from ..models.resume import ResumeAnalysisResult, ATSScore, ResumeSection, ResumeSuggestion
 
 logger = logging.getLogger(__name__)
 

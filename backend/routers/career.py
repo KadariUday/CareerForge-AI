@@ -2,11 +2,11 @@
 import logging
 from datetime import datetime, timezone
 from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
-from models.career import CareerInput, CareerOutput
-from models.user import UserResponse
-from services.auth_service import get_current_user
-from config.database import get_db
-from ai_services import analyze_career
+from ..models.career import CareerInput, CareerOutput
+from ..models.user import UserResponse
+from ..services.auth_service import get_current_user
+from ..config.database import get_db
+from ..ai_services import analyze_career
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/career", tags=["Career Guidance"])

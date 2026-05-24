@@ -7,7 +7,7 @@ import logging
 import time
 import hashlib
 from typing import Any, Optional
-from config.settings import settings
+from ..config.settings import settings
 
 logger = logging.getLogger(__name__)
 
