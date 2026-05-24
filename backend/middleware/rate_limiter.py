@@ -76,6 +76,11 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
         if request.url.path in self.EXEMPT_PATHS:
             return await call_next(request)
 
+        allowed = True
+        remaining = 0
+        limit = settings.RATE_LIMIT_REQUESTS
+        key = "unknown"
+
         try:
             # Identify user by JWT sub or by IP
             key = self._get_identifier(request)
@@ -90,30 +95,34 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
                 allowed, remaining = _limiter.is_allowed(key)
                 limit = settings.RATE_LIMIT_REQUESTS
 
-            if not allowed:
-                logger.warning(f"Rate limit exceeded for key: {key}")
-                return JSONResponse(
-                    status_code=429,
-                    content={
-                        "detail": "Rate limit exceeded. Please wait before making more requests.",
-                        "limit": limit,
-                        "window_seconds": settings.RATE_LIMIT_WINDOW_SECONDS,
-                    },
-                    headers={
-                        "Retry-After": str(settings.RATE_LIMIT_WINDOW_SECONDS),
-                        "X-RateLimit-Limit": str(limit),
-                        "X-RateLimit-Remaining": "0",
-                    },
-                )
-
-            response = await call_next(request)
-            response.headers["X-RateLimit-Limit"] = str(limit)
-            response.headers["X-RateLimit-Remaining"] = str(remaining)
-            return response
-
         except Exception as e:
             logger.error(f"Rate limiter error (passing through): {e}")
-            return await call_next(request)
+            allowed = True
+            remaining = 0
+
+        if not allowed:
+            logger.warning(f"Rate limit exceeded for key: {key}")
+            return JSONResponse(
+                status_code=429,
+                content={
+                    "detail": "Rate limit exceeded. Please wait before making more requests.",
+                    "limit": limit,
+                    "window_seconds": settings.RATE_LIMIT_WINDOW_SECONDS,
+                },
+                headers={
+                    "Retry-After": str(settings.RATE_LIMIT_WINDOW_SECONDS),
+                    "X-RateLimit-Limit": str(limit),
+                    "X-RateLimit-Remaining": "0",
+                },
+            )
+
+        response = await call_next(request)
+        try:
+            response.headers["X-RateLimit-Limit"] = str(limit)
+            response.headers["X-RateLimit-Remaining"] = str(remaining)
+        except Exception:
+            pass
+        return response
 
     def _get_identifier(self, request: Request) -> str:
         """

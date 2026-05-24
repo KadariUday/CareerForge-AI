@@ -1,6 +1,6 @@
 """Career guidance router."""
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
 from models.career import CareerInput, CareerOutput
 from models.user import UserResponse
@@ -21,7 +21,7 @@ async def _save_result_bg(user_id: str, input_data: dict, result: dict):
                 "user_id": user_id,
                 "input_data": input_data,
                 "result": result,
-                "created_at": datetime.utcnow(),
+                "created_at": datetime.now(timezone.utc),
             })
     except Exception as e:
         logger.error(f"Failed to save career result: {e}")

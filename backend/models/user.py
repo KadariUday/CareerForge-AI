@@ -1,9 +1,10 @@
+
 """
 Pydantic models for User authentication and profile management.
 """
 from pydantic import BaseModel, EmailStr, Field
 from typing import Optional, List
-from datetime import datetime
+from datetime import datetime, timezone
 from enum import Enum
 
 
@@ -59,8 +60,8 @@ class UserInDB(BaseModel):
     hashed_password: str
     role: UserRole = UserRole.STUDENT
     is_active: bool = True
-    created_at: datetime = Field(default_factory=datetime.utcnow)
-    updated_at: datetime = Field(default_factory=datetime.utcnow)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     # Profile extras
     skills: List[str] = []
     interests: List[str] = []

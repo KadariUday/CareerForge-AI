@@ -3,7 +3,7 @@ Pydantic models for the AI Career Guidance module.
 """
 from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
-from datetime import datetime
+from datetime import datetime, timezone
 from enum import Enum
 
 
@@ -60,7 +60,7 @@ class CareerOutput(BaseModel):
     summary: str
     immediate_action: str
     source: str = "ai"  # "ai" or "rule_based" (fallback)
-    generated_at: datetime = Field(default_factory=datetime.utcnow)
+    generated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
 
 class CareerResultDB(BaseModel):
@@ -68,5 +68,5 @@ class CareerResultDB(BaseModel):
     user_id: str
     input_data: Dict[str, Any]
     result: Dict[str, Any]
-    created_at: datetime = Field(default_factory=datetime.utcnow)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     is_cached: bool = False

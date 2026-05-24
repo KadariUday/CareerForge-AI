@@ -69,9 +69,11 @@ async def _create_indexes() -> None:
         # Chat history: user_id index
         await _db.chat_history.create_index([("user_id", 1), ("created_at", -1)])
 
-        # College data: exam + state compound index
+        # College data: indexes for predictor queries
         await _db.college_data.create_index([("exam", 1), ("state", 1)])
-        await _db.college_data.create_index("cutoff_rank")
+        await _db.college_data.create_index("cutoffs.category")
+        await _db.college_data.create_index("fees_lpa")
+        await _db.college_data.create_index("college_id", unique=True)
 
         logger.info("✅ MongoDB indexes created/verified.")
     except Exception as e:

@@ -3,7 +3,7 @@ Pydantic models for Resume Analyzer module.
 """
 from pydantic import BaseModel, Field
 from typing import List, Optional, Dict
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 class ResumeSection(BaseModel):
@@ -55,7 +55,7 @@ class ResumeAnalysisResult(BaseModel):
     improved_summary: Optional[str] = None
     ai_review: Optional[str] = None
     source: str = "ai"
-    generated_at: datetime = Field(default_factory=datetime.utcnow)
+    generated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
 
 class ResumeInDB(BaseModel):
@@ -67,5 +67,5 @@ class ResumeInDB(BaseModel):
     analysis: Optional[Dict] = None
     job_description: Optional[str] = None
     target_role: Optional[str] = None
-    created_at: datetime = Field(default_factory=datetime.utcnow)
-    updated_at: datetime = Field(default_factory=datetime.utcnow)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))

@@ -3,7 +3,7 @@ Authentication service: JWT creation/validation, password hashing,
 user creation and lookup.
 """
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Optional
 from bson import ObjectId
 
@@ -44,10 +44,10 @@ def verify_password(plain_password: str, stored_password: str) -> bool:
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
     """Create a signed JWT with expiry."""
     to_encode = data.copy()
-    expire = datetime.utcnow() + (
+    expire = datetime.now(timezone.utc) + (
         expires_delta or timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
     )
-    to_encode.update({"exp": expire, "iat": datetime.utcnow()})
+    to_encode.update({"exp": expire, "iat": datetime.now(timezone.utc)})
     return jwt.encode(to_encode, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
 
 
@@ -121,7 +121,7 @@ def user_doc_to_response(doc: dict) -> UserResponse:
         name=doc["name"],
         email=doc["email"],
         role=doc.get("role", UserRole.STUDENT),
-        created_at=doc.get("created_at", datetime.utcnow()),
+        created_at=doc.get("created_at", datetime.now(timezone.utc)),
         is_active=doc.get("is_active", True),
     )
 

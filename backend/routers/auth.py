@@ -71,8 +71,8 @@ async def update_profile(
     if not update_data:
         raise HTTPException(status_code=400, detail="No update data provided")
 
-    from datetime import datetime
-    update_data["updated_at"] = datetime.utcnow()
+    from datetime import datetime, timezone
+    update_data["updated_at"] = datetime.now(timezone.utc)
 
     await db.users.update_one(
         {"_id": ObjectId(current_user.id)},

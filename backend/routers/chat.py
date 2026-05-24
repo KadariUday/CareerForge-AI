@@ -1,6 +1,6 @@
 """AI Chat assistant router with session management."""
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 from fastapi import APIRouter, Depends, HTTPException
 from models.chat import ChatRequest, ChatResponse, ChatSessionInDB, ChatMessage, MessageRole
 from models.user import UserResponse
@@ -18,7 +18,7 @@ async def _persist_message(user_id: str, session_id: str, role: str, content: st
         db = get_db()
         if db is None:
             return
-        now = datetime.utcnow()
+        now = datetime.now(timezone.utc)
         message = {"role": role, "content": content, "timestamp": now}
         await db.chat_history.update_one(
             {"user_id": user_id, "session_id": session_id},
