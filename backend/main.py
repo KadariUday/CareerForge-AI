@@ -83,6 +83,7 @@ app.add_middleware(
 app.add_middleware(RateLimitMiddleware)
 
 # ─── Static Files ─────────────────────────────────────────────────────────────
+os.makedirs(settings.UPLOAD_DIR, exist_ok=True)
 app.mount("/uploads", StaticFiles(directory=settings.UPLOAD_DIR), name="uploads")
 
 # ─── Routers ──────────────────────────────────────────────────────────────────
