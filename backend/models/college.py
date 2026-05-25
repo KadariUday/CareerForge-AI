@@ -47,6 +47,10 @@ class CollegePredictorInput(BaseModel):
         default=None,
         description="Maximum annual fees in Lakhs"
     )
+    preferred_branch: Optional[str] = Field(
+        default=None,
+        description="Optional branch or discipline filter (e.g. 'Agriculture', 'Pharmacy')"
+    )
     college_type: Optional[List[CollegeType]] = None
 
     class Config:

@@ -2,24 +2,24 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { collegeAPI } from '../api/axios'
 import toast from 'react-hot-toast'
-import { 
-  BarChart, 
-  Bar, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  ResponsiveContainer, 
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
   ReferenceLine,
   Cell
 } from 'recharts'
-import { 
-  School, 
-  Search, 
-  MapPin, 
-  CreditCard, 
-  Award, 
-  GraduationCap, 
+import {
+  School,
+  Search,
+  MapPin,
+  CreditCard,
+  Award,
+  GraduationCap,
   ChevronRight,
   TrendingUp,
   Filter,
@@ -32,8 +32,8 @@ import {
 const EXAMS = ['NEET', 'JEE_MAINS', 'JEE_ADVANCED', 'EAMCET', 'EAMCET_BIPC', 'KCET', 'MHT_CET', 'COMEDK']
 const CATEGORIES = ['General', 'OBC', 'SC', 'ST', 'EWS', 'PWD']
 const STATES = [
-  'Andhra Pradesh', 'Bihar', 'Delhi', 'Gujarat', 'Karnataka', 
-  'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Puducherry', 'Punjab', 
+  'Andhra Pradesh', 'Bihar', 'Delhi', 'Gujarat', 'Karnataka',
+  'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Puducherry', 'Punjab',
   'Rajasthan', 'Tamil Nadu', 'Telangana', 'Uttar Pradesh', 'Uttarakhand',
   'All India'
 ]
@@ -52,16 +52,16 @@ const itemVariants = {
 }
 
 export default function CollegePredictor() {
-  const [form, setForm] = useState({ exam: 'NEET', rank: '', category: 'General', state: '', max_fees_lpa: '' })
+  const [form, setForm] = useState({ exam: 'NEET', rank: '', category: 'General', state: '', max_fees_lpa: '', preferred_branch: 'All' })
   const [result, setResult] = useState(null)
   const [loading, setLoading] = useState(false)
   const [activeTab, setActiveTab] = useState('safe')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (!form.rank || !form.state) { 
+    if (!form.rank || !form.state) {
       toast.error('Please enter your rank and home state')
-      return 
+      return
     }
     setLoading(true)
     try {
@@ -69,6 +69,7 @@ export default function CollegePredictor() {
         exam: form.exam, rank: parseInt(form.rank),
         category: form.category, state: form.state,
         max_fees_lpa: form.max_fees_lpa ? parseFloat(form.max_fees_lpa) : undefined,
+        preferred_branch: form.preferred_branch
       }
       const { data } = await collegeAPI.predict(payload)
       setResult(data)
@@ -82,15 +83,15 @@ export default function CollegePredictor() {
   }
 
   const colleges = result ? (activeTab === 'safe' ? result.safe : activeTab === 'target' ? result.target : result.dream) : []
-  
+
   const chartData = result ? [
-    ...result.safe.slice(0,2).map(c => ({ name: c.college.name.split(' ')[0], cutoff: c.avg_cutoff, type: 'Safe', full: c.college.name })),
-    ...result.target.slice(0,2).map(c => ({ name: c.college.name.split(' ')[0], cutoff: c.avg_cutoff, type: 'Target', full: c.college.name })),
-    ...result.dream.slice(0,2).map(c => ({ name: c.college.name.split(' ')[0], cutoff: c.avg_cutoff, type: 'Dream', full: c.college.name })),
+    ...result.safe.slice(0, 2).map(c => ({ name: c.college.name.split(' ')[0], cutoff: c.avg_cutoff, type: 'Safe', full: c.college.name })),
+    ...result.target.slice(0, 2).map(c => ({ name: c.college.name.split(' ')[0], cutoff: c.avg_cutoff, type: 'Target', full: c.college.name })),
+    ...result.dream.slice(0, 2).map(c => ({ name: c.college.name.split(' ')[0], cutoff: c.avg_cutoff, type: 'Dream', full: c.college.name })),
   ] : []
 
   const getClassificationColor = (type) => {
-    switch(type) {
+    switch (type) {
       case 'Safe': return '#10b981'
       case 'Target': return '#f59e0b'
       case 'Dream': return '#f43f5e'
@@ -112,7 +113,7 @@ export default function CollegePredictor() {
       </motion.div>
 
       {/* Form Section */}
-      <motion.form 
+      <motion.form
         onSubmit={handleSubmit}
         className="glass-card p-8 border-indigo-500/10"
         initial={{ opacity: 0, y: 20 }}
@@ -127,9 +128,9 @@ export default function CollegePredictor() {
           <div className="space-y-2">
             <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Competitive Exam</label>
             <div className="relative group">
-              <select 
-                value={form.exam} 
-                onChange={e => setForm({...form, exam: e.target.value})} 
+              <select
+                value={form.exam}
+                onChange={e => setForm({ ...form, exam: e.target.value })}
                 className="input-field appearance-none pr-10"
               >
                 {EXAMS.map(e => <option key={e} value={e}>{e.replace('_', ' ')}</option>)}
@@ -139,14 +140,47 @@ export default function CollegePredictor() {
           </div>
 
           <div className="space-y-2">
+            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Preferred Discipline</label>
+            <div className="relative group">
+              <select
+                value={form.preferred_branch}
+                onChange={e => setForm({ ...form, preferred_branch: e.target.value })}
+                className="input-field appearance-none pr-10"
+              >
+                {form.exam === 'EAMCET_BIPC' ? (
+                  <>
+                    <option value="All">Core BIPC (Agri/Pharm/Vet)</option>
+                    <option value="Agriculture">Agriculture</option>
+                    <option value="Pharmacy">Pharmacy / Pharm.D</option>
+                    <option value="Veterinary">Veterinary</option>
+                    <option value="Horticulture">Horticulture</option>
+                  </>
+                ) : (
+                  <>
+                    <option value="All">All Disciplines</option>
+                    <option value="Agriculture">Agriculture</option>
+                    <option value="Pharmacy">Pharmacy / Pharm.D</option>
+                    <option value="Medical">Medical / Paramedical</option>
+                    <option value="Computer">Computer Science / IT</option>
+                    <option value="Mechanical">Mechanical Engineering</option>
+                    <option value="Civil">Civil Engineering</option>
+                    <option value="Electronics">Electronics / ECE / EEE</option>
+                  </>
+                )}
+              </select>
+              <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 rotate-90 pointer-events-none group-hover:text-indigo-400 transition-colors" />
+            </div>
+          </div>
+
+          <div className="space-y-2">
             <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Your All India Rank</label>
             <div className="relative">
-              <input 
-                type="number" min="1" required 
-                value={form.rank} 
-                onChange={e => setForm({...form, rank: e.target.value})}
-                className="input-field pl-10" 
-                placeholder="e.g. 25000" 
+              <input
+                type="number" min="1" required
+                value={form.rank}
+                onChange={e => setForm({ ...form, rank: e.target.value })}
+                className="input-field pl-10"
+                placeholder="e.g. 25000"
               />
               <TrendingUp className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
             </div>
@@ -155,9 +189,9 @@ export default function CollegePredictor() {
           <div className="space-y-2">
             <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Category Quota</label>
             <div className="relative group">
-              <select 
-                value={form.category} 
-                onChange={e => setForm({...form, category: e.target.value})} 
+              <select
+                value={form.category}
+                onChange={e => setForm({ ...form, category: e.target.value })}
                 className="input-field appearance-none pr-10"
               >
                 {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
@@ -169,10 +203,10 @@ export default function CollegePredictor() {
           <div className="space-y-2">
             <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Home State</label>
             <div className="relative group">
-              <select 
-                value={form.state} 
-                onChange={e => setForm({...form, state: e.target.value})} 
-                className="input-field appearance-none pr-10" 
+              <select
+                value={form.state}
+                onChange={e => setForm({ ...form, state: e.target.value })}
+                className="input-field appearance-none pr-10"
                 required
               >
                 <option value="">Select Home State</option>
@@ -185,21 +219,21 @@ export default function CollegePredictor() {
           <div className="space-y-2">
             <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Max Annual Fees (LPA) (Optional)</label>
             <div className="relative">
-              <input 
+              <input
                 type="number" min="0" step="0.1"
-                value={form.max_fees_lpa} 
-                onChange={e => setForm({...form, max_fees_lpa: e.target.value})}
-                className="input-field pl-10" 
-                placeholder="e.g. 5.0" 
+                value={form.max_fees_lpa}
+                onChange={e => setForm({ ...form, max_fees_lpa: e.target.value })}
+                className="input-field pl-10"
+                placeholder="e.g. 5.0"
               />
               <CreditCard className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
             </div>
           </div>
 
           <div className="flex items-end">
-            <button 
-              type="submit" 
-              disabled={loading} 
+            <button
+              type="submit"
+              disabled={loading}
               className="btn-primary w-full py-3.5 group flex items-center justify-center gap-2"
             >
               {loading ? (
@@ -221,7 +255,7 @@ export default function CollegePredictor() {
       {/* Results Section */}
       <AnimatePresence>
         {result && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             className="space-y-10 pb-20"
@@ -253,18 +287,18 @@ export default function CollegePredictor() {
               {/* Left Side: Visualization */}
               <div className="lg:col-span-1 space-y-6">
                 <div className="glass-card p-6 h-full min-h-[300px] flex flex-col">
-                   <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
+                  <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
                     <TrendingUp className="w-5 h-5 text-indigo-400" />
                     Rank Analysis
                   </h3>
-                  
+
                   <div className="flex-1 w-full">
                     <ResponsiveContainer width="100%" height="100%">
                       <BarChart data={chartData} layout="vertical" margin={{ left: -20, right: 20 }}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" horizontal={false} />
                         <XAxis type="number" hide />
                         <YAxis dataKey="name" type="category" tick={{ fill: '#94a3b8', fontSize: 10, fontWeight: 600 }} width={80} />
-                        <Tooltip 
+                        <Tooltip
                           cursor={{ fill: 'rgba(255,255,255,0.02)' }}
                           contentStyle={{ background: '#0f172a', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }}
                           labelStyle={{ color: '#fff', fontWeight: 'bold', marginBottom: '4px' }}
@@ -278,7 +312,7 @@ export default function CollegePredictor() {
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
-                  
+
                   <p className="text-[10px] text-slate-500 text-center mt-4 uppercase tracking-[0.2em] font-bold">
                     Relative cutoff proximity map
                   </p>
@@ -288,26 +322,24 @@ export default function CollegePredictor() {
               {/* Right Side: Tabbed Results */}
               <div className="lg:col-span-2 space-y-6">
                 <div className="flex p-1 rounded-2xl bg-slate-900/50 border border-white/5 backdrop-blur-sm self-start">
-                  {['safe','target','dream'].map(tab => (
-                    <button 
-                      key={tab} 
+                  {['safe', 'target', 'dream'].map(tab => (
+                    <button
+                      key={tab}
                       onClick={() => setActiveTab(tab)}
-                      className={`flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition-all duration-300 ${
-                        activeTab === tab 
-                        ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/20' 
-                        : 'text-slate-500 hover:text-slate-300'
-                      }`}
+                      className={`flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition-all duration-300 ${activeTab === tab
+                          ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/20'
+                          : 'text-slate-500 hover:text-slate-300'
+                        }`}
                     >
-                      <div className={`w-2 h-2 rounded-full ${
-                        tab === 'safe' ? 'bg-emerald-500' : tab === 'target' ? 'bg-amber-500' : 'bg-rose-500'
-                      }`} />
+                      <div className={`w-2 h-2 rounded-full ${tab === 'safe' ? 'bg-emerald-500' : tab === 'target' ? 'bg-amber-500' : 'bg-rose-500'
+                        }`} />
                       {tab}
                       <span className="ml-1 opacity-50">({result[tab].length})</span>
                     </button>
                   ))}
                 </div>
 
-                <motion.div 
+                <motion.div
                   layout
                   className="grid grid-cols-1 gap-4"
                 >
@@ -318,7 +350,7 @@ export default function CollegePredictor() {
                       <p className="text-slate-600 text-sm">Try broadening your search or adjusting your max fees.</p>
                     </div>
                   ) : colleges.map((pred, i) => (
-                    <motion.div 
+                    <motion.div
                       key={pred.college.college_id + i}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -329,11 +361,10 @@ export default function CollegePredictor() {
                         <div className="flex flex-col md:flex-row justify-between gap-6">
                           <div className="space-y-4">
                             <div className="flex items-center gap-3">
-                              <div className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border ${
-                                activeTab === 'safe' ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 
-                                activeTab === 'target' ? 'bg-amber-500/10 text-amber-400 border-amber-500/20' : 
-                                'bg-rose-500/10 text-rose-400 border-rose-500/20'
-                              }`}>
+                              <div className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border ${activeTab === 'safe' ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' :
+                                  activeTab === 'target' ? 'bg-amber-500/10 text-amber-400 border-amber-500/20' :
+                                    'bg-rose-500/10 text-rose-400 border-rose-500/20'
+                                }`}>
                                 {pred.admission_chance_percent}% Probability
                               </div>
                               <div className="flex items-center gap-1 text-slate-500 text-[10px] font-bold uppercase tracking-widest">
@@ -341,7 +372,7 @@ export default function CollegePredictor() {
                                 {pred.college.college_type}
                               </div>
                             </div>
-                            
+
                             <div>
                               <h3 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors leading-tight">
                                 {pred.college.name}
@@ -367,7 +398,7 @@ export default function CollegePredictor() {
                                 {pred.rank_gap <= 0 ? `+${Math.abs(pred.rank_gap).toLocaleString()} above avg` : `-${Math.abs(pred.rank_gap).toLocaleString()} below avg`}
                               </div>
                             </div>
-                            
+
                             <div className="flex items-center gap-4">
                               <div className="text-right">
                                 <div className="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Fees / Year</div>
@@ -382,21 +413,20 @@ export default function CollegePredictor() {
                             </div>
                           </div>
                         </div>
-                        
+
                         {/* Interactive Footer */}
                         <div className="mt-6 pt-6 border-t border-white/5 flex items-center justify-between">
                           <div className="flex-1 max-w-[200px]">
-                             <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                                <motion.div 
-                                  initial={{ width: 0 }}
-                                  animate={{ width: `${pred.admission_chance_percent}%` }}
-                                  className={`h-full rounded-full bg-gradient-to-r ${
-                                    activeTab === 'safe' ? 'from-emerald-500 to-emerald-400' : 
-                                    activeTab === 'target' ? 'from-amber-500 to-amber-400' : 
-                                    'from-rose-500 to-rose-400'
-                                  }`} 
-                                />
-                             </div>
+                            <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                              <motion.div
+                                initial={{ width: 0 }}
+                                animate={{ width: `${pred.admission_chance_percent}%` }}
+                                className={`h-full rounded-full bg-gradient-to-r ${activeTab === 'safe' ? 'from-emerald-500 to-emerald-400' :
+                                    activeTab === 'target' ? 'from-amber-500 to-amber-400' :
+                                      'from-rose-500 to-rose-400'
+                                  }`}
+                              />
+                            </div>
                           </div>
                           <button className="flex items-center gap-2 text-[10px] font-bold text-indigo-400 uppercase tracking-widest hover:text-indigo-300 transition-colors group/btn">
                             View Prospectus
@@ -411,7 +441,7 @@ export default function CollegePredictor() {
             </div>
 
             {/* Disclaimer */}
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="glass-card p-6 border-amber-500/10 bg-amber-500/5 flex items-start gap-4"
             >

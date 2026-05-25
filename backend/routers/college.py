@@ -32,7 +32,7 @@ async def predict_colleges(
     db: AsyncIOMotorDatabase = Depends(get_db)
 ):
     """Predict colleges based on rank, exam, category, and state."""
-    cache_key = make_cache_key("college_v2", data.exam, data.rank, data.category, data.state)
+    cache_key = make_cache_key("college_v2", data.exam, data.rank, data.category, data.state, data.preferred_branch)
     cached = await cache_get(cache_key)
     if cached:
         return CollegePredictorOutput(**cached)
@@ -54,6 +54,16 @@ async def predict_colleges(
         
     if data.college_type:
         query["college_type"] = {"$in": [ct.value for ct in data.college_type]}
+
+    if data.exam.value == "EAMCET_BIPC":
+        # Strictly filter for Core BIPC courses, exclude Allied/Paramedical by default
+        if not data.preferred_branch or data.preferred_branch.lower() == "all":
+            query["branch"] = {"$regex": "Agriculture|Pharmacy|Pharm\\.D|Veterinary|Horticulture", "$options": "i"}
+        else:
+            query["branch"] = {"$regex": data.preferred_branch, "$options": "i"}
+    else:
+        if data.preferred_branch and data.preferred_branch.lower() != "all":
+            query["branch"] = {"$regex": data.preferred_branch, "$options": "i"}
 
     # Fetch from MongoDB
     cursor = db.college_data.find(query)
