@@ -10,7 +10,7 @@ from ..models.contact import ContactRequest, ContactMessageInDB
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/contact", tags=["Contact"])
 
-async def send_contact_email(name: str, email: str, phone: str, message: str):
+def send_contact_email(name: str, email: str, phone: str, message: str):
     """Send a plain text email to the maintainer using SMTP."""
     if not settings.SMTP_USER or not settings.SMTP_PASSWORD:
         logger.warning("SMTP credentials not set. Email not sent.")
@@ -35,6 +35,7 @@ This email was sent automatically from CareerForge AI.
     msg['Subject'] = subject
     msg['From'] = settings.SMTP_USER
     msg['To'] = settings.CONTACT_EMAIL
+    msg.add_header('Reply-To', email)
 
     try:
         with smtplib.SMTP(settings.SMTP_HOST, settings.SMTP_PORT) as server:
