@@ -15,7 +15,8 @@ import {
   Star,
   Send,
   Mail,
-  User
+  User,
+  Phone
 } from 'lucide-react'
 
 const FEATURES = [
@@ -71,7 +72,7 @@ const itemVariants = {
 }
 
 export default function Landing() {
-  const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' })
+  const [contactForm, setContactForm] = useState({ name: '', email: '', phone: '', message: '' })
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleContactSubmit = async (e) => {
@@ -80,7 +81,7 @@ export default function Landing() {
     try {
       await api.post('/api/contact', contactForm)
       toast.success('Message sent! I will get back to you soon.')
-      setContactForm({ name: '', email: '', message: '' })
+      setContactForm({ name: '', email: '', phone: '', message: '' })
     } catch (err) {
       toast.error('Failed to send message. Please try again later.')
     } finally {
@@ -328,6 +329,21 @@ export default function Landing() {
                     placeholder="john@example.com" 
                   />
                   <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500 group-focus-within:text-indigo-400 transition-colors" />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Phone Number</label>
+                <div className="relative group">
+                  <input 
+                    type="tel" 
+                    required
+                    value={contactForm.phone}
+                    onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
+                    className="input-field pl-12" 
+                    placeholder="+91 98765 43210" 
+                  />
+                  <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500 group-focus-within:text-indigo-400 transition-colors" />
                 </div>
               </div>
 
