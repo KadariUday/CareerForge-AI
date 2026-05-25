@@ -58,9 +58,11 @@ async def predict_colleges(
     if data.exam.value == "EAMCET_BIPC":
         # Strictly filter for Core BIPC courses, exclude Allied/Paramedical by default
         if not data.preferred_branch or data.preferred_branch.lower() == "all":
-            query["branch"] = {"$regex": "Agriculture|Pharmacy|Pharm\\.D|Veterinary|Horticulture", "$options": "i"}
+            query["branch"] = {"$regex": "Agriculture|Pharmacy|Pharm\\.D|V\\.Sc|Horticulture", "$options": "i"}
         else:
-            query["branch"] = {"$regex": data.preferred_branch, "$options": "i"}
+            # If Veterinary is selected, match B.V.Sc
+            branch_regex = "V\\.Sc" if data.preferred_branch.lower() == "veterinary" else data.preferred_branch
+            query["branch"] = {"$regex": branch_regex, "$options": "i"}
     else:
         if data.preferred_branch and data.preferred_branch.lower() != "all":
             query["branch"] = {"$regex": data.preferred_branch, "$options": "i"}
