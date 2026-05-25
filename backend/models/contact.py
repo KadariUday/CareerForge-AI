@@ -1,10 +1,12 @@
 from pydantic import BaseModel, EmailStr, Field
 from datetime import datetime, timezone
 
+from typing import Optional
+
 class ContactRequest(BaseModel):
     name: str
     email: EmailStr
-    phone: str
+    phone: Optional[str] = None
     message: str
 
 class ContactMessageInDB(ContactRequest):

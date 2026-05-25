@@ -10,7 +10,7 @@ from ..models.contact import ContactRequest, ContactMessageInDB
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/contact", tags=["Contact"])
 
-def send_contact_email(name: str, email: str, phone: str, message: str):
+def send_contact_email(name: str, email: str, phone: Optional[str], message: str):
     """Send a plain text email to the maintainer using SMTP."""
     if not settings.SMTP_USER or not settings.SMTP_PASSWORD:
         logger.warning("SMTP credentials not set. Email not sent.")
@@ -22,7 +22,7 @@ New contact form submission from CareerForge AI:
 
 Name: {name}
 Email: {email}
-Phone: {phone}
+Phone: {phone if phone else 'Not provided'}
 
 Message:
 {message}
